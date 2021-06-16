@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; 
+import { Card } from './card'; //fucntional component
+import { Bus } from './bus'; // using Props
+import { House } from './house'; // using Events e.g onClick, onBlur, onChange 
+import { Country } from './country'; // using Hook e.g useState, useEffect, useRef
+import { Book } from './Book'; // using Hook e.g useState, useEffect, useRef
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* FUNCTIONAL COMPONENT */}
+      <Card />
+
+      <hr/>
+
+        {/* USING PROPS */}
+      <Bus name="Cocomelon" />
+
+      <hr/>
+
+        {/* USING EVENTS eg. onClick, onBlur, onChange */}
+      <House/>
+
+      <hr/>
+
+        {/* USING HOOK eg. useState, useEffect, useRef */}
+      <Country/>
+      
+      <hr/>
+ 
+        {/* USING INTERFACES */}
+      <Book/> 
+
     </div>
+
   );
 }
 
