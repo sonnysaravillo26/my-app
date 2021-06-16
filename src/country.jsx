@@ -22,7 +22,7 @@ export const Country = () => {
     // USING useEffect same concept like Page onload javascript
     useEffect(()=> {
         console.log("we are here");
-    }, [])
+    }, []) // <- '[]' loads only on the first time 
     return (
         <div> 
             Welcome to my country 
